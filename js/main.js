@@ -45,7 +45,16 @@
 
   Scene.activeCamera.attachControl(Canvas);
 
+  var prevTime, currentTime, deltaTime = 0;
+  prevTime = currentTime = Date.now();
+
   Engine.runRenderLoop(function() {
+    currentTime = Date.now();
+    deltaTime = (currentTime - prevTime)/1000;
+    prevTime = currentTime;
+
+    box.rotation.y += 1*deltaTime;
+
     Scene.render();
   });
 
