@@ -24,6 +24,13 @@
 
   // Add camera controls to the canvas
   scene.activeCamera.attachControl(canvas);
+  scene.activeCamera.keysUp.push(90); // Z
+  scene.activeCamera.keysUp.push(87); // W
+  scene.activeCamera.keysDown.push(83); // S
+  scene.activeCamera.keysLeft.push(65); // A
+  scene.activeCamera.keysLeft.push(81); // Q
+  scene.activeCamera.keysRight.push(69); // E
+  scene.activeCamera.keysRight.push(68); // D
 
   // Add a sun point light
   var sun = new BABYLON.PointLight(
