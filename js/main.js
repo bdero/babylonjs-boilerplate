@@ -31,11 +31,12 @@
   scene.activeCamera.keysLeft.push(81); // Q
   scene.activeCamera.keysRight.push(69); // E
   scene.activeCamera.keysRight.push(68); // D
+  scene.activeCamera.speed = 0.8;
 
   // Add a sun point light
-  var sun = new BABYLON.PointLight(
-    "Omni",
-    new BABYLON.Vector3(0, 18, -5),
+  var sun = new BABYLON.DirectionalLight(
+    "Directional",
+    new BABYLON.Vector3(2, -5, 0),
     scene
   );
   sun.intensity = 0.9;
@@ -62,24 +63,18 @@
   ball.position.y = 10;
   ball.setPhysicsState(
     BABYLON.PhysicsEngine.SphereImposter,
-    {
-      mass: 1,
-      friction: 0.5,
-      restitution: 0.7
-    }
+    { mass: 1 }
   );
-  ball.checkCollisions = true;
 
   // Add a box to rotate
   var box = BABYLON.Mesh.CreateBox("Cube", 2, scene);
   box.position.x = 5;
-  box.position.y = 3.5;
+  box.position.y = 4;
   box.position.z = -5;
   box.checkCollisions = true;
 
   // Setup Shadows
   var shadowGenerator = new BABYLON.ShadowGenerator(2048, sun);
-  shadowGenerator.getShadowMap().renderList.push(floor);
   shadowGenerator.getShadowMap().renderList.push(ball);
   shadowGenerator.getShadowMap().renderList.push(box);
 
