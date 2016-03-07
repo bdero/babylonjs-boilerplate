@@ -42,6 +42,7 @@ gulp.task('default', ['browserify'], function(done) {
   http.createServer(
     st({ index: 'index.html', cache: false, path: __dirname })
   ).listen(8080, done);
+  console.log('Now listening: http://localhost:8080 ....');
   livereload.listen();
   gulp.watch('src/*', ['browserify']);
 });
