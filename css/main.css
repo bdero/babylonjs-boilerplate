@@ -3,3 +3,9 @@ html, body, canvas {
   height: 100%;
   overflow: hidden;
 }
+
+#stats {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}

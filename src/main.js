@@ -1,3 +1,5 @@
+var stats = require('./stats');
+
 // Grab the canvas and initialize the engine
 var canvas = document.getElementById("canvas");
 var engine = new BABYLON.Engine(canvas, true);
@@ -81,6 +83,8 @@ var prevTime, currentTime, deltaTime = 0;
 prevTime = currentTime = Date.now();
 
 engine.runRenderLoop(function() {
+  stats.begin();
+
   // Update the time
   currentTime = Date.now();
   deltaTime = (currentTime - prevTime)/1000;
@@ -91,6 +95,8 @@ engine.runRenderLoop(function() {
 
   // Render the scene
   scene.render();
+
+  stats.end();
 });
 
 window.addEventListener("resize", function() {
