@@ -1,7 +1,7 @@
-var stats = require('./stats');
+var stats = require('./utils/stats');
 
-var engine = require('./engine');
-var scene = require('./scene');
+var engine = require('./engine/engine');
+var scene = require('./engine/scene');
 
 // Create a new player
 var player = require('./player');
@@ -70,8 +70,4 @@ engine.runRenderLoop(function() {
   scene.render();
 
   stats.end();
-});
-
-window.addEventListener("resize", () => {
-  engine.resize();
 });

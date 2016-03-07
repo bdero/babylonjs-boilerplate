@@ -1,4 +1,4 @@
-var scene = require('./scene');
+var scene = require('./engine/scene');
 
 // Add first person player camera with physics
 var camera = new BABYLON.FreeCamera(
