@@ -3,13 +3,16 @@ Babylon.js Boilerplate
 A boilerplate project that serves as a scaffold for quickly setting up new
 [Babylon.js](https://github.com/BabylonJS/Babylon.js) projects.
 
+This includes a gulp pipeline which supports ES6 (via Babel) and automatically
+obtains the latest Babylon.js and Oimo.js (physics library) builds.
+
 
 To use
 ------
-Simply clone this repository and start hacking on the code.
-```teminal
-git clone https://github.com/bdero/babylonjs-boilerplate.git
-```
+1. Clone this repository: `git clone https://github.com/bdero/babylonjs-boilerplate.git`
+2. Install the dependencies: `npm install`
+3. Run the watcher using the **dev** command: `npm run dev`
+4. Begin hacking on the code, and the watcher will automatically recompile on save.
 
 
 License
