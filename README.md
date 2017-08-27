@@ -12,7 +12,8 @@ To use
 1. Clone this repository: `git clone https://github.com/bdero/babylonjs-boilerplate.git`
 2. Install the dependencies: `npm install`
 3. Run the watcher using the **dev** command: `npm run dev`
-4. Begin hacking on the code, and the watcher will automatically recompile on save.
+4. Navigate to **http://localhost:8080**
+5. Begin hacking on the code, and the watcher will automatically recompile on save.
 
 
 License
